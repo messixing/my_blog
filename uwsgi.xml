@@ -1,0 +1,14 @@
+<uwsgi>
+  <socket>:8000</socket>
+  <listen>20</listen>
+  <master>true</master>
+  <pidfile>./uwsgi.pid</pidfile>
+  <processes>20</processes>
+  <module>ts.wsgi</module>  #这个文件下面要建立
+  <pythonpath>/root/ts/</pythonpath>   #刚才建立项目的路径
+  <profiler>true</profiler>
+  <memory-report>true</memory-report>
+  <enable-threads>true</enable-threads>
+  <logdate>true</logdate>
+  <limit-as>6048</limit-as>
+</uwsgi>

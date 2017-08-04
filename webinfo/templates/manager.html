@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>manager</title>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+             $.ajax({
+                 type:"get",
+                 url:"/show_all_user/",
+                 dataType:"json",
+                 success:function(data){
+                     write = '当前有以下用户<br />'
+                     for(var i = 0; i < data.length; i++){
+                         write += data[i] + '<br />'
+                     }
+                     document.write(write);
+                 }
+             });
+         </script>
+</body>
+</html>
